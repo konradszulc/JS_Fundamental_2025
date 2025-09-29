@@ -1,4 +1,4 @@
-Welcome to my public Git Repo for all workshop submission's for the JavaScript Fundamental course. Included in this read me is a direct table of contents which leads to each submission folder for past,present and future workshops. I will update this as more is added.
+Welcome to my public Git Repo for all workshop submission's for the JavaScript Fundamental course. Included in this README is a direct table of contents which leads to each submission folder for past,present and future workshops. I will update this as more is added.
 
 #Table of Contents
 
