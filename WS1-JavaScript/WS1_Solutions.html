@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WS1-JS</title>
+</head>
+<body>
+    <h1>Independant Excerises</h1>
+    <h2>Task 1: Dog Age</h2>
+    <script>
+        function dogsAge(age) {
+            return age * 7
+        }
+        document.write("A person at the age of 4 would be " + dogsAge(4) + " in dog years<br>")
+        document.write("A person at the age of 16 would be " + dogsAge(16) + " in dog years<br>")
+        document.write("A person at the age of 34 would be " + dogsAge(34) + " in dog years<br>")
+        document.write("A person at the age of 67 would be " + dogsAge(67) + " in dog years")
+    </script>
+
+    <h3>Task 2: Debugging Challenge</h3>
+    <script>
+        // This code is broken! Find and fix the errors. EDIT: FIXED
+        let i = 5; //Added Semicolon at the end
+        let j = 10; //Added Semicolon at the end
+        let k = 25; 
+         //previous code on line 27 was let l = Joe; Removed due to unessecary code not used anywhere else, if it was needed then it would have to be let l = "Joe";
+        const arr = [3, 5, 7];
+        
+        if (i < j) {
+            console.log("i");
+        } else if (j > k) {
+            console.log("k");
+        } else {
+            console.log("j"); // Added end quote (") to j since it was missing
+        }
+        for (let i = 0; i < arr.length ; ++i) { 
+            console.log(arr[i]);
+        }
+        /*
+        for loop changes:
+        1. changed 3 to arr.length since the program wants to continue the loop till all items in array counted, if the array was added or removed some items then the for loop will still account for all items because of arr.length
+        2. changed <= to < this is because the loop would go an additional time and log an undefined due to the count being one higher than the index, in this example of 3: we want it to stop at item 3 when adding cause it will be index 2.
+        */
+    </script>
+
+</body>
+</html>
