@@ -24,6 +24,7 @@
         function renderRandomCatPic () {
             //math.random uses float numbers, but we want integers thus must use math.floor to round up to nearest whole number. 
             let randomIndex = Math.floor(Math.random() * imageCatArray.length);
+            //by using the id of the img, are able to get to the src section and change the url based off one of the index in the array
             document.getElementById("randomCatPic").src = imageCatArray[randomIndex];
             //console.log for own testing purposes to see which index is being chosen and working properly.
             console.log(randomIndex)
