@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise3_WS2</title>
+</head>
+<body>
+    <h1>Conditional Location Relocation(BOM)</h1>
+    <p>What kind of browser type do you have? Let's find out with BOM <br></p>
+
+    <script>
+        //window.onload makes it to run the script once the page fully loads
+        window.onload =  function () {
+            // variable userAgent will store what browser it is, since navigator.userAgent finds out the browser.
+            let userAgent = navigator.userAgent;
+            //by using the variable with includes, can make an if statement to do something based on the word we want. I could change it to chrome if wanted to.
+            if (userAgent.includes("Firefox")) {
+                //location.href just redirects to a page i specify
+                location.href = "https://www.mozilla.org/en-US/";
+            }
+            else { 
+                //DOM just puts the text into the page, due to using window.onload earlier it overwrites the previous text made earlier
+                document.write("<p> This is not a Firefox Browser, not changing pages</p>");
+
+            }
+        }
+    </script>
+</body>
+</html>

@@ -6,4 +6,4 @@ Welcome to my public Git Repo for all workshop submission's for the JavaScript F
 
 [Workshop 1](WS1-JavaScript)
 
-[Workshop 2](WS2-JavaScript)
+[Workshop 2](WS2-JavaScript-DOM-BOM)

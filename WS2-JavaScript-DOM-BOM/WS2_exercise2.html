@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise2_WS2</title>
+</head>
+<body>
+    <script>
+        function repeatingText(length) { 
+        //length is the parameter in this case scenario made it 30 as needed, but can be changed to anything in the argument when function is called
+            for (let i = 0; i < length; i++) {
+                document.write ("Can we get much higher? How many times: " + (i + 1) + "<br>" );
+                //added "+ 1" to i to show it repeats 30 times, because i will start at 0 so would show 0 up to 29 for visual clarity
+                //added <br> for additional clarity as it would all be on the same line, <br> line breaks
+            }
+        }
+        repeatingText(30);
+        //calls the function
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise4_WS2</title>
+</head>
+<body>
+    <h1>Exercise 4 WS 2 - Confirmation Dialog</h1>
+    <p id = "answer"> Please Click the Are you student? button to bring up confirmation window. Press OK for yes or Cancel for NO</p>
+    <button onclick = "checkStudent()"> Are you a student?</button>
+    <script>
+        function checkStudent() {
+            //grabs the boolen value of what the user picks through optional message box 
+            let isStudent = confirm ("are you a student?");
+            //by using the <p> tag id and innerHTML can utilize that space to change it to desired text we want to show after function is compoleted
+            document.getElementById("answer").innerHTML = "you are a student: " + isStudent;
+
+        }
+    </script>
+</body>
+</html>

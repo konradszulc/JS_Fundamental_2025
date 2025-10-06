@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise5_WS2</title>
+</head>
+<body>
+    <h1>Exercise 5 WS 2- Time to load random cat pics with random, dom and arrays.</h1>
+    <p> Please press the button below to bring up a random cat pic</p>
+    <button onclick = "renderRandomCatPic()">View Cat Picture</button><br><br>
+    <img id = "randomCatPic" src = "" alt = "Cat Pictures" style = "width: 500px; height: auto;">
+    
+    <script>
+        //creating const array to store image links
+        const imageCatArray = [
+            "https://images.pexels.com/photos/1643457/pexels-photo-1643457.jpeg",
+            "https://images.pexels.com/photos/1643456/pexels-photo-1643456.jpeg",
+            "https://images.pexels.com/photos/96428/pexels-photo-96428.jpeg",
+            "https://images.pexels.com/photos/96938/pexels-photo-96938.jpeg",
+            "https://images.pexels.com/photos/1543793/pexels-photo-1543793.jpeg"
+        ];
+
+        function renderRandomCatPic () {
+            //math.random uses float numbers, but we want integers thus must use math.floor to round up to nearest whole number. 
+            let randomIndex = Math.floor(Math.random() * imageCatArray.length);
+            document.getElementById("randomCatPic").src = imageCatArray[randomIndex];
+            //console.log for own testing purposes to see which index is being chosen and working properly.
+            console.log(randomIndex)
+        }
+        //Loads a random cat image on page load before button is pressed.
+        renderRandomCatPic();
+    </script>
+</body>
+</html>
