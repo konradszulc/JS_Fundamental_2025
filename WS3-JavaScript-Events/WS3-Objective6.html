@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Multiple Listeners</title>
+</head>
+<body>
+    <button id = "a"> Click for Multiple</button>
+    <script>
+        let element = document.getElementById('a');
+        element.onclick = function() {alert ('first');};
+        element.onclick = function() {alert ('second');}; //this one overwrites the first onclick
+        //both event will play one after the other
+        element.addEventListener('click', function(){ alert('third');});
+        element.addEventListener('click', function() { alert('fourth');});
+    </script>
+</body>
+</html>

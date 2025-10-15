@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Basic HTML Events Example</title>
+</head>
+<body>
+
+    <h1>Common Events Demo</h1>
+    <p>
+        Page loaded! (onload event)
+    </p>
+    <input type="text" id = "myInput" onchange="alert('Input changed!')"> <!--Alert when input changed-->
+    <button onclick ="alert('Button Clicked!')">Click ME</button> <!--causes alert when button pressed-->
+    <p onmouseover = "this.style.color='red'" onmouseout="this.style.color='black'">Hover Over Me!</p><!--When hovering off and on changes color-->
+    <script>
+        //when page loads, this function activates
+        window.onload = function() {
+            document.body.innerHTML += "<p>JS onload triggered!<p>";
+        };
+    </script>
+</body>
+</html>

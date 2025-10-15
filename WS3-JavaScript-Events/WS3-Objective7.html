@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Browser compatibility</title>
+</head>
+<body>
+    <button id = "compatBtn">Compatible click</button>
+    <script>
+        let btn = document.getElementById('compatBtn');
+        function compatClick(){
+            alert('Compatible!');
+        }
+        //checks if it is on a browser that supports eventlistener, if not uses attachevent
+        if (window.addEventListener) {
+            btn.addEventListener ('click', compatClick);
+        } else if (window.attachEvent) {
+            btn.attachEvent('onclick', compatClick);
+        }
+    </script>
+</body>
+</html>

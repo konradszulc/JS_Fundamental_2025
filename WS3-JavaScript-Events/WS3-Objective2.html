@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HTML Event Attributes</title>
+</head>
+<body>
+    <h1>Event Attributes Demo</h1>
+    <input type ="text" onfocus="alert('Input Focused!')"> <!--caused alert when input field is focused on, in this case can hardlock the page due to constant focus-->
+    <form onsubmit ="alert('Form Submitted!'); return false;"> <!-- when submitting a form causes alert, return false prevents reloading of page-->
+        <input type = "text" placeholder = "Enter Name">
+        <button type="Submit">Submit</button>
+    </form>
+    <button onmouseover="alert('Mouse over!')" onmouseout = "alert('Mouse Out!')"?>Hover Button</button> <!--Alerts appears based on hovering of the button-->
+</body>
+</html>

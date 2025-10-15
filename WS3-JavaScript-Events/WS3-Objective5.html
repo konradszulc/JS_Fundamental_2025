@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Dynamic Listeners</title>
+</head>
+<body>
+    <h1 id="myH1">Click Me!</h1>
+    <button onclick="removeListener()">Remove Listener</button> <!--To test that the event on h1 gets removed-->
+    <script>
+        let element = document.getElementsByTagName('h1')[0]; //finds the h1 element in an array
+        //function to provide alert with text
+        function sayHello(){
+            alert("Hello world!");
+        }
+        //creates an event listener when click perform function
+        element.addEventListener ("click", sayHello);
+        //function to remove the listener, so it wont work on click me text, when button to remove it is pressed.
+        function removeListener() {
+            element.removeEventListener("click", sayHello);
+            console.log("Listener Removed!");
+        }
+    </script>
+    
+</body>
+</html>

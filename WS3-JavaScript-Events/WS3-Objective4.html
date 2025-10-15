@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Common Events List</title>
+</head>
+<body onload="alert('Page Loaded!')"> <!--The moment page fully loads, alert occurs-->
+    <h1>Common Events</h1>
+    <select onchange = "alert('Selection Changed!')"> <!--When the selection change causes alert-->
+        <option>Option 1</option>
+        <option>Option 2</option>
+    </select>
+    <input type ="text" onkeydown="alert('Key Down!')"> <!--activates alert when key is pressed-->
+    <br><br><br> <!--Using <br> to move image away form input and option selection for better clarity-->
+    <img src ="https://images.pexels.com/photos/45170/kittens-cat-cat-puppy-rush-45170.jpeg" 
+        onmouseover = "this.src = 'https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg'" 
+        onmouseout = "this.src = 'https://images.pexels.com/photos/45170/kittens-cat-cat-puppy-rush-45170.jpeg'" 
+        alt = "Hover Image" style = "width: 500px; height: 500px;" > <!--Causes the image to change depending on mouse over or out-->
+    
+</body>
+</html>
