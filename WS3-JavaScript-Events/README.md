@@ -6,7 +6,7 @@
 
 3. See console output by opening browser developer tools. Shortcuts for Windows/Linux: Press F12 or Ctrl + Shift  + I. Shortcuts for Mac: Press Cmd + Opt + I
 
-4. Interact with the various features on webpage, to see the results. For example Obj 4 has screenshot below, can hover over picture to change it.
+4. Interact with the various features on webpage, to see the results. For example Obj 4 has screenshot below as to what it should look like in your browser.
 
 # Example of Objective 4 screenshot
 
