@@ -5,14 +5,34 @@
     <title>Multiple Listeners</title>
 </head>
 <body>
-    <button id = "a"> Click for Multiple</button>
+    <button id = "multi"> Click for Multiple</button>
     <script>
-        let element = document.getElementById('a');
-        element.onclick = function() {alert ('first');};
-        element.onclick = function() {alert ('second');}; //this one overwrites the first onclick
+        //created variables to put into function parameters for better clarity when calling the function
+        let firstWord = "first";
+        let secondWord ="second";
+        let thirdWord = "third";
+        let fourthWord = "fourth";
+        //variable for ease of using getElementById()
+        let element = document.getElementById('multi');
+        //created a function to let variable go in as parameter for consistency
+        function getMulAlert(word) {
+            alert(word);
+        };
+
+        
+        element.onclick = function() {
+            getMulAlert(firstWord);
+        };
+        element.onclick = function(){
+            getMulAlert(secondWord);
+        }; //this one overwrites the first onclick
+
         //both event will play one after the other
-        element.addEventListener('click', function(){ alert('third');});
-        element.addEventListener('click', function() { alert('fourth');});
+        element.addEventListener('click', function(){
+            getMulAlert(thirdWord)});
+
+        element.addEventListener('click', function(){
+            getMulAlert(fourthWord)});
     </script>
 </body>
 </html>
