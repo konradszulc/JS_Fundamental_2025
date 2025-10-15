@@ -8,14 +8,15 @@
     <button id = "compatBtn">Compatible click</button>
     <script>
         let btn = document.getElementById('compatBtn');
+        //function to create an alert that is called upon in if statements
         function compatClick(){
             alert('Compatible!');
         }
         //checks if it is on a browser that supports eventlistener, if not uses attachevent
         if (window.addEventListener) {
-            btn.addEventListener ('click', compatClick);
+            btn.addEventListener ('click', compatClick); //if on newer modern browsers 
         } else if (window.attachEvent) {
-            btn.attachEvent('onclick', compatClick);
+            btn.attachEvent('onclick', compatClick);//if on older legacy browsers
         }
     </script>
 </body>
