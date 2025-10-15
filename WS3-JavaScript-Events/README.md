@@ -10,4 +10,4 @@
 
 # Example of Objective 4 screenshot
 
-![Screenshot of browser](../images/exObj4.jpg)
+![Screenshot of browser](../images/exObj4.JPG)
