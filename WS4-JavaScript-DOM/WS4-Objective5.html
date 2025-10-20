@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Elements</title>
+</head>
+<body>
+    <h1>Dynamic Element Creation</h1>
+    <button id="addParaBtn">Add New Paragraph</button>
+    <button id="addListItemBtn">Add New List Item</button>
+    <ul id="myList">
+        <li>I am List item 1</li>
+    </ul>
+    <!--Created two buttons, to then be able to click to add a new <p> element to page, or add to the list which was made already with <ul> unorderedlists-->
+    <script>
+        //counter to see how many times paragraph created
+        let paraCount = 0;
+        //adds event to perform desired action when button clicked
+        document.getElementById('addParaBtn').addEventListener('click', () => {
+            // Creates a new paragraph element when btn clicked
+            const newParagraph = document.createElement('p');//createElement() need to actually create the desired element (Handy and clear)
+
+            // Customizes the paragraph making it blue and with unique text, changes the number each time
+            paraCount++; //adds 1 to the count each time clicked
+            newParagraph.textContent = `Dynamically created paragraph #${paraCount}`;//will show the count and adds the textContent in the element
+            newParagraph.style.color = 'blue';//changes text colour
+
+            //Appends the paragraph to the body (the new child element to the parent element)
+            document.body.appendChild(newParagraph);//will show at the bottom of the last current element in body
+        });
+        //already one item in list so it starts at 1
+        let listItemCount = 1;
+        document.getElementById('addListItemBtn').addEventListener('click', () => {
+            // Creates a new list item element
+            const newListItem = document.createElement('li');
+
+            //Customizes the list item
+            listItemCount++;//adds to the count
+            newListItem.textContent = `New List Item ${listItemCount}`;//will display current count in list since it updates with listItemCount and adds textContent in the new element.
+
+            // Appends the list item to the existing unordered list
+            const myList = document.getElementById('myList');
+            myList.appendChild(newListItem);//will show at the bottom of the latest list item
+        });
+        /*Three rules to remember in dynamic element creation:
+        1.Creating the Element
+        2.Customizing the Element
+        3.Appending to the DOM
+        */
+        
+    </script>
+    
+</body>
+</html>

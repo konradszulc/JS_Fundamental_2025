@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lets Find Elements</title>
+</head>
+<body>
+    <h1 id = "only-id"> This is it's own header</h1>
+    <p class="body-text"> First text paragraph</p>
+    <p class="body-text">Second text paragraph</p>
+    <div> a div element</div>
+    <ul>
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+    </ul>
+    <!--Created various elements some with id, class.
+     Such as Header, P, Divs, Unorderedlists to test finding elements-->
+
+     <script>
+
+        //will log after every test, to show the output of finding the element
+        // Get Element by ID ( will return a single element)
+        const onlyHeading = document.getElementById('only-id');
+        console.log('Element by ID: ', onlyHeading.textContent);
+
+        //Find Elements by ClassName (will return as HTMLCollection, acts like an array)
+        const textPara = document.getElementsByClassName('body-text');
+        console.log('Elements by Class Name:', textPara[0].textContent)//since acts like array first index will show first paragraph, second index shows second paragraph
+        console.log('Elements by Class Name:', textPara[1].textContent)
+
+        //Grab elements through tag name (will return a HTMLCollection)
+        const allPara = document.getElementsByTagName('p');
+        console.log('Elements by Tag Name (all paragraphs):', allPara.length); //will show how many elements are found with .length
+
+        //Finds the first element that matches the CSS selector when using Query selector
+        const singleDiv = document.querySelector('div');
+        console.log('First Div by Query Selector:', singleDiv.textContent);
+
+        // 5. Query Selector All returns a NodeList (which is similar to HTMLCollection of all matching elements)
+        const allListItems = document.querySelectorAll('ul li');
+        console.log('All List Items by Query Selector All:', allListItems.length); // provides how many items in the list
+     </script>
+</body>
+</html>

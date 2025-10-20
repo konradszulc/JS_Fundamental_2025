@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Intro</title>
+</head>
+<body>
+    <h1 id = "main-title"> Welcome to DOM Scripting!</h1> <!--Using Id to grab the element by id-->
+    <p class = "intro-text">This is a sample paragraph</p> <!--Using class name can also find the element-->
+    <script>
+        //Accessing the Element by ID
+        const mainTitleElement = document.getElementById('main-title');
+        console.log('Title Elelment:', mainTitleElement.textContent); //Shows in log that the variable grabs the text content in the element with ID
+        //Accessing the Element by Class name this will return a collection
+        const mainIntroPara = document.getElementsByClassName('intro-text');
+        console.log('Intro Paragraphs:', mainIntroPara[0].textContent); //Shows in log the first index collection
+    </script>
+    
+</body>
+</html>

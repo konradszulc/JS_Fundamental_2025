@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempering Content and Attributes</title>
+</head>
+<body>
+    <h1 id="personalHeading">Lets change this heading up (original)</h1>
+    <p id="personalParagraph">We definetly can change this(original)</p>
+    <img id="personalImage" src="https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg" alt="Random Cat" style = "width: 500px; height: 500px;"><br><br>
+    <a id="personalLink" href="https://www.youtube.com/">Visit Youtube</a>
+    <!--By giving elements IDs makes it easy to find and temper with in JS, this content would be the first view, however by using JS we can change all contents within when loaded-->
+    <script>
+
+        //Changing innerHTML to strengthen the style
+        const headingElement = document.getElementById('personalHeading');
+        headingElement.innerHTML = '<strong>New <em>Updated</em> Heading</strong>'; //<strong> makes it bolded, while <em> makes it italicized changing the original text
+
+        // Changing textContent to be unpersonalized
+        const paragraphElement = document.getElementById('personalParagraph');
+        paragraphElement.textContent = 'The paragraph content has been changed to plain text.'; //changes the original wording to just a plain text
+
+        // Changing an attribute by using a different img link
+        const imageElement = document.getElementById('personalImage');
+        imageElement.setAttribute('src', 'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg'); //by setting the attribute, can change the content within to change things like the src or alt text
+        imageElement.setAttribute('alt', 'Cute Dogs');
+
+        //Changing multiple attributes by giving a different href in a new target
+        const linkElement = document.getElementById('personalLink');
+        linkElement.setAttribute('href', 'https://www.w3schools.com'); //no longer will go to youtube, but w3schools instead
+        linkElement.setAttribute('target', '_blank'); // this opens the link in a new tab
+        linkElement.textContent = 'Visit W3Schools'; // also changing the text content within the link
+    </script>
+
+</body>
+</html>

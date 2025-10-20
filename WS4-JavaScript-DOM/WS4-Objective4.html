@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Styles & Animations</title>
+    <style>
+        .red-background {
+            background-color: red;
+            color: white;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        /*Will change the background red, text white and has some padding for the text to the border */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        /*creates the smooth animation to fade in text*/
+    </style>
+</head>
+<body>
+    <button id="changeStyleBtn">Toggle Red Background</button>
+    <p id="styledParagraph">This text is going to change background colour, and text colour</p>
+    <button id="animateBtn">Click to Fade in heading</button>
+    <h1 id="animatedHeading">I will fade in!</h1>
+    <!--Added button to change the background and text color of the p element text, Another button to fade in the header text
+    Provided Ids for each element to find and add script to change the styling-->
+
+    <script>
+        //Changes the individual style properties of each element
+        const paragraph = document.getElementById('styledParagraph');
+        //add event listener for button to perform change on click
+        document.getElementById('changeStyleBtn').addEventListener('click', () => {
+            //created if statements, to change it to the opposite of what it currently is, thus clicking button multiple times can turn it on or off
+            if (paragraph.style.backgroundColor === 'red') {
+                paragraph.style.backgroundColor = ''; //Reset to original
+                paragraph.style.color = '';
+            } else {
+                paragraph.style.backgroundColor = 'red';
+                paragraph.style.color = 'white';
+            }
+        });
+
+        //Toggling CSS classes for animation
+        const headingToAnimate = document.getElementById('animatedHeading');
+        headingToAnimate.style.opacity = '0'; // Ensure it is hidden onload of page
+        document.getElementById('animateBtn').addEventListener('click', () => {
+            headingToAnimate.classList.add('fade-in');
+            //on click with perform the fade in animation
+        });
+    </script>
+</body>
+</html>
