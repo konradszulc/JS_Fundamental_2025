@@ -11,3 +11,5 @@ Going Forward, I have added additional README files in WS3 folder and onward. Th
 [Workshop 2](WS2-JavaScript-DOM-BOM)
 
 [Workshop 3](WS3-JavaScript-Events)
+
+[Workshop 4](WS4-JavaScript-DOM)
